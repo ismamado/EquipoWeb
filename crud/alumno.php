@@ -18,7 +18,7 @@
     </head>
     <body>
   
-            <div class="container mt-5">
+        <!--    <div class="container mt-5">
                     <div class="row"> 
                         
                         <div class="col-md-3">
@@ -33,9 +33,9 @@
                                     <input type="submit" class="btn btn-success">
                                     <form action="../index.html" method="post">
              <p></p>
-             <p>
-              
-            </p>
+             <p> 
+              d
+            </p>  -->
         </form> <form action="/LOGGIN/index.html" method="POST">
            <center><input class="btn btn-danger" type="submit" value="Cerrar Sesion"></center></form> 
                                 </form>
