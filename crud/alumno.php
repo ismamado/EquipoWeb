@@ -34,13 +34,14 @@
                                     <form action="../index.html" method="post">
              <p></p>
              <p> 
-              d
+              
             </p> 
-        </form> -->
+        </form> 
           
             <form action="/LOGGIN/index.html" method="POST">
-           <center><input class="btn btn-danger" type="submit" value="Cerrar Sesion"></center></form> 
-                                </form>
+           <center><input class="btn btn-danger" type="submit" value="Cerrar Sesion"></center>
+                               </form> 
+                                
                         </div>
 
                         <div class="col-md-8">
