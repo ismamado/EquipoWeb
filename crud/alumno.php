@@ -34,7 +34,7 @@
                                     <form action="../index.html" method="post">
              <p></p>
              <p> 
-              
+              d
             </p>  -->
         </form> <form action="/LOGGIN/index.html" method="POST">
            <center><input class="btn btn-danger" type="submit" value="Cerrar Sesion"></center></form> 
