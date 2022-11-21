@@ -44,12 +44,12 @@
                         <div class="col-md-8">
                             <table class="table" >
                                 <thead class="TABLE_TITLE" > 
-                                   <div class="table__title">Lista de Calificaciones </div>
+                                   <div class="table__title">Lista de Paquetes </div>
                                     <tr>
-                                        <th>N.Control</th>
-                                        <th>Calificación</th>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
+                                        <th>N. Guia</th>
+                                        <th>Recibe</th>
+                                        <th>Dirección</th>
+                                        <th>Estatus</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
