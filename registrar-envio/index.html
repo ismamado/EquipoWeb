@@ -2,7 +2,7 @@
 <html>
     <head>
        <!--  enlazar con css -->
-        <link rel = "stylesheet" type="text/css" href="Estilos.css"/>
+        <link rel = "stylesheet" type="text/css" href="../Estilos.css"/>
 
       <!--  cambiar tipo de fuente de texto -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
         </div>
 
             <div class ="contenido_remitente">
-             <table><form method="get" name="Registro_remitente">
+             <table><form method="post" name="Registro_remitente">
                     <th colspan="2"><h2> REMITENTE </h2></th>
                     
                      <tr>
@@ -29,8 +29,8 @@
                      <tr>
                          <td>Estado:</td>
                         <td><select name="estado_remitente">
-                             <option value= "Guerrero" >Guerrero</option>
-                             <option value= "CDMX">CDMX</option>
+                             <option value="Guerrero" >Guerrero</option>
+                             <option value="CDMX">CDMX</option>
                              <option value="Oaxaca">Oaxaca</option>
                              <option value="Campeche">Campeche</option>
                              <option value="Chiapas">Chiapas</option>
@@ -63,10 +63,9 @@
                          <td>Comentarios:</td>
                          <td><textarea name="Comentarios"  rows="5" cols="20"></textarea></td>  
                      </tr>
-                  <th colspan="2"><center><button>Verificar</button></center> </th>
-                  
-                     </table></form>
-            </div>
+                  <th colspan="2"><center><button>Verificar</button></center></th>
+                 </form>
+                </table></div>
 
             <div class ="contenido_destinatario">
                 <table><form method="get" name="Registro_destinatario">
@@ -116,8 +115,7 @@
                         </tr>
                 
                      <th colspan="2"><center> <button>Verificar</button></center> </th>
-                        </table></form>        
-            </div>
+                    </form></table></div>
 
             <div class="generar_guia">
                 <p><b>UNA VEZ HAYAS CONFIRMADO LA INFORMACIÓN, YA PUEDES GENERAR TU GUÍA DE ENVIO</b><p>
@@ -128,7 +126,7 @@
             </div>
 
             <div class="envio_animacion"> 
-                <img src="IMAGENES/delivery.png"> </div>
+                <img src="../IMAGENES/delivery.png"> </div>
 
         </section>
 
