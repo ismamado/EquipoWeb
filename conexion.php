@@ -19,8 +19,8 @@ function insertar($conexion){
     $Telefono =  $_POST["telefono"];
     
     
-    $consulta = "INSERT INTO `usuarios`(`usuario`, `password`, `Email`, `Nombre`, `ApellidoPat`, `ApellidoMat`, `Direccion`, 
-    `Telefono`) VALUES 
+    $consulta = "INSERT INTO `usuarios`(`usuario`, `password`, `email`, `nombre`, `apellidopat`, `apellidomat`, `direccion`, 
+    `telefono`) VALUES 
     ('$User','$Passw','$Email','$Nombre','$ApellidoPat','$ApellidoMat','$Direccion','$Telefono')";
     
     try{
