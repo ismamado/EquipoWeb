@@ -1,0 +1,90 @@
+<!-- 
+    <?php
+
+$servername = "localhost";
+$username = "progra62_Karla";
+$password = "TicketMiau123";
+$dbname = "progra62_ticketMiau";
+    
+$conexion=mysqli_connect($servername, $username, $password, $dbname);
+if ($conexion) {
+echo " <script > alert ('Su compra se esta procesando...') </script>";      
+}
+else {
+    echo " <script > alert ('No hay conexion a la base') </script>";  
+    
+}
+/* REMITENTE */
+    $nombre_remitente= $_GET["nombre_remitente"];
+    $estado_remitente =$_GET["tipo_remitente"];
+    $cantidad_remitente =$_GET["cantidad_remitente"];
+    $direccion_remitente =$_GET["direccion_remitente"];
+    $correo_remitente = $_GET["correo_remitente"];
+    $telefono_remitente = $_GET["telefono_remitente"];
+    $Comentarios_remitente = $_GET["Comentarios_remitente"];
+/* DESTINATARIO */
+$nombre_destinatario= $_GET["nombre_destinatario"];
+$estado_destinatario =$_GET["estado_destinatario"];
+$direccion_destinatario =$_GET["direccion_destinatario"];
+$Comentarios_destinatario =$_GET["Comentarios_destinatario"];
+$correo_destinatario = $_GET["correo_destinatario"];
+$telefono_destinatario = $_GET["telefono_destinatario"];
+
+    if ($tipo_remitente == "Estandar") {
+$tipo = 130;
+}
+else if 
+  ($tipo_remitente == "Express") {
+$tipo = 220;
+}  
+else  {
+$tipo = 300;
+}
+
+ $totalcompra = $tipo * $cantidad_remitente;
+ 
+ mysqli_query($conexion,"
+	INSERT INTO compra(RFC, Nombre, Correo, Seccion, Cantidad, TotalCompra) 
+	VALUES ('$rfc','$nombre','$correo','$seccion','$cantidad','$totalcompra')") 
+	or  die("Problemas en el select".mysqli_error($conexion));
+ 
+if ($recibircorreo = 'true') {
+
+    $asunto = "Confirmación de compra";
+    $cuerpo = "  
+    HOLA $nombre! Con este correo confirmamos que realizaste una compra boletos, una cantidad de $cantidad en $seccion ,obteniendo un total de compra de $totalcompra. ¡Gracias por su compra!
+    ";  
+    $remitente = "Ticketmiau. <itsmiauwe@gmail.com>";
+mail ($correo,$asunto,$cuerpo,$remitente);   
+echo " <script > alert ('¡Compra exitosa!') </script>";      
+
+} else {
+  echo " <script > alert ('No recibira notificaciones') </script>"; 
+  }
+
+mysqli_close($conexion);
+
+echo " --><!DOCTYPE html>
+<html lang="es"> 
+<head>
+<link rel = "stylesheet" type="text/css" href="Estilos.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bayon&family=League+Spartan&display=swap" rel="stylesheet">
+	</head>
+	<body> 
+<div class = "graciascompra" >		
+<h1> Gracias por preferir SENDIT para tus envios. </h1>
+<p> ¿Deseas recibir un correo donde te proporcionaremos la información de tu paquete? </p>
+<p2><b> Recuerda que igualmente accediento a la sección de 'Pedidos' puedes visualizar la información. </b><p2><br>
+
+ <input type="radio" value="true" name="recibircorreo">Si 
+ <input type="radio" value="false" name="recibircorreo"> No <br>
+ <button>Siguiente</button>
+</class>	
+</body >
+</html>
+       
+<!--        ";
+
+?> -->

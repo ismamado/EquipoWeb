@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="Estilos.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+	<body> 
+	<div class="ventas">
+<br>
+		    <center> <h1> REGISTROS EXISTENTES </h1></center><br>
+
+</br>
+<center><table width=90% >
+    <tr> 
+    <th> Id Guía </th>
+    <th> Fecha - Salida </th>
+    <th> Remitente </th>
+    <th> Destinatario</th> 
+    <th> Tipo </th>
+    <th> Total </th>
+    <th> Estatus </th>
+    <th> Fecha - Llegada </th>
+    <th> Acciones </th>
+    </tr>
+
+<?php
+$consulta="select * from compra";
+$registros=mysqli_query($conexion,$consulta);
+
+while ($reg=mysqli_fetch_array($registros)){
+
+?>
+   <tr>  
+    <td><center> <?php echo $reg['ID_Guia'] ?></td>
+    <td><center> <?php echo $reg['fecha_Salida'] ?></td>
+    <td><center> <?php echo $reg['nombre_remitente'] ?></td>
+    <td><center> <?php echo $reg['nombre_destinatario'] ?></td>
+    <td><center> <?php echo $reg['tipo_envio'] ?></td>
+    <td><center> <?php echo $reg['total_envio'] ?></td>
+    <td><center> <?php echo $reg['estatus_env'] ?></td>
+    <td><center> <?php echo $reg['fecha_Llegada'] ?></td>
+    <td><center>   <a href="actualizar.php?ID=<?php echo $reg["ID"];?>"> <button type="button" class"modificar">Modificar</button></a> <a href="eliminar.php"> <a href="eliminar.php?ID=<?php echo $reg["ID"];?>"><button type="button" class"eliminar">Eliminar</button></a></td>
+    
+    </tr>
+    <?php
+} mysqli_close($conexion);
+    ?>
+
+</table></center></br>
+
+</div></body>
+</html>

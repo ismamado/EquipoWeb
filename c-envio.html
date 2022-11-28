@@ -18,7 +18,7 @@
         </div>
 
             <div class ="contenido_remitente">
-             <table><form method="get" name="Registro_remitente">
+             <table><form method="get" action="enviorealizado.php" name="Registro_remitente">
                     <th colspan="2"><h2> REMITENTE </h2></th>
                     
                      <tr>
@@ -47,12 +47,17 @@
                      <tr>
                         <td>Tipo de envio:</td>
                        <td><select name="tipo_remitente">
-                            <option value= "Guerrero" >Estandar - $150 (7-10 días) </option>
-                            <option value= "CDMX">Express - $230 (3-5 días) </option>
-                            <option value="Oaxaca">Ultra express - $ 300 (1 día) </option>
+                            <option value= "Estandar" >Estandar - $130 (7-10 días) </option>
+                            <option value= "Express">Express - $220 (3-5 días) </option>
+                            <option value="Ultra">Ultra express - $300 (1 día) </option>
                           </select></td> 
                     </tr>
                      
+                    <tr>
+                        <td>Cantidad:</td>
+                        <td><input type=number name="cantidad_remitente" min="1" max="8"></td>  
+                    </tr>
+                
                      <tr>
                          <td>Dirección:</td>
                          <td><input type=text name="direccion_remitente"></td>  
@@ -70,7 +75,7 @@
              
                      <tr>
                          <td>Comentarios:</td>
-                         <td><textarea name="Comentarios"  rows="5" cols="20"></textarea></td>  
+                         <td><textarea name="Comentarios_remitente"  rows="5" cols="20"></textarea></td>  
                      </tr>
                   <th colspan="2"><center><button>Verificar</button></center> </th>
                   
@@ -78,7 +83,7 @@
             </div>
 
             <div class ="contenido_destinatario">
-                <table><form method="get" name="Registro_destinatario">
+                <table><form method="get" action="enviorealizado.php" name="Registro_destinatario">
                        <th colspan="2"><h2> DESTINATARIO</h2></th>
                        
                         <tr>
@@ -111,7 +116,7 @@
 
                         <tr>
                             <td>Referencias:</td>
-                            <td><textarea name="Comentarios"  rows="5" cols="20" ></textarea></td>  
+                            <td><textarea name="Comentarios_destinatario"  rows="5" cols="20" ></textarea></td>  
                         </tr>
                         
                         <tr>
@@ -130,7 +135,6 @@
 
             <div class="generar_guia">
                 <p><b>UNA VEZ HAYAS CONFIRMADO LA INFORMACIÓN, YA PUEDES GENERAR TU GUÍA DE ENVIO</b><p>
-                <p>Te enviaremos un correo electronico proporcionandote toda la información</p><br>
                 <table>
                 <th colspan="2"><center> <button><b>OBTENER GUIA</b></button></center> </th>
             </table>

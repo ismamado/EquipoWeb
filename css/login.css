@@ -21,10 +21,14 @@ form {
 	margin-bottom: 30px
 }
 
+.btn btn-success{
+	background-color:#a22;
+}
+
 h1 {
 	text-align: center;
 	padding: 12px;
-	color: rgb(206, 203, 203)
+	color: rgb(0, 0, 0)
 }
 
 input {

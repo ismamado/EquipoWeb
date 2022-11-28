@@ -3,7 +3,7 @@ function conectar(){
     $host="localhost";
 
     $user="softteci_paqueteria";
-    $pass="equipoweb1";
+    $pass="equipoweb";
 
     $bd="softteci_paqueteria";
 
