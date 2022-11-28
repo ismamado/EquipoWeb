@@ -2,7 +2,7 @@
     include("conexion.php");
     $con=conectar();
 
-    $sql="SELECT *  FROM alumno";
+    $sql="SELECT *  FROM paquete";
     $query=mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
                         <div class="col-md-8">
                             <table class="table" >
                                 <thead class="TABLE_TITLE" > 
-                                   <div class="table__title">Lista de Calificaciones </div>
+                                   <div class="table__title">Lista de Paquetes </div>
                                     <tr>
                                         <th>N.Control</th>
                                         <th>Calificación</th>

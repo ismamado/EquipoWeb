@@ -2,7 +2,7 @@
     include("conexion.php");
     $con=conectar();
 
-    $sql="SELECT *  FROM alumno";
+    $sql="SELECT *  FROM paquete";
     $query=mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
@@ -63,10 +63,10 @@
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
                                             <tr>
-                                                <th><?php  echo $row['ncontrol']?></th>
-                                                <th><?php  echo $row['calif']?></th>
-                                                <th><?php  echo $row['nombres']?></th>
-                                                <th><?php  echo $row['apellidos']?></th>    
+                                                <th><?php  echo $row['idpaquete']?></th>
+                                                <th><?php  echo $row['titular']?></th>
+                                                <th><?php  echo $row['direccion']?></th>
+                                                <th><?php  echo $row['estado']?></th>    
                                                 <th><a href="actualizar.php?id=<?php echo $row['ncontrol'] ?>" class="EDITAR">Editar</a></th>
                                                 <th><a href="delete.php?id=<?php echo $row['ncontrol'] ?>" class="ELIMINAR">Eliminar</a></th>                                        
                                             </tr>
