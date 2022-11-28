@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <!--  enlazar con css -->
+        <link rel = "stylesheet" type="text/css" href="Estilos.css"/>
+
+      <!--  cambiar tipo de fuente de texto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bayon&family=League+Spartan&display=swap" rel="stylesheet">
+    </head>
+        
+    <body>
+        <section class="seccion-2"> 
+            <div class="titulo_seccion2">
+            <h1>¡ESTAS A PUNTO DE QUE TE AYUDEMOS A ENVIAR TU PAQUETE!</h1>
+            <p><b> RELLENA LOS CAMPOS CON LA RESPECTIVA INFORMACIÓN QUE SE TE SOLICITA</b></p>
+        </div>
+
+            <div class ="contenido_remitente">
+             <table><form method="get" name="Registro_remitente">
+                    <th colspan="2"><h2> REMITENTE </h2></th>
+                    
+                     <tr>
+                         <td>Nombre:</td>
+                         <td><input type=text name="nombre_remitente"></td>  
+                     </tr>
+                     
+                     <tr>
+                         <td>Estado:</td>
+                        <td><select name="estado_remitente">
+                             <option value= "Guerrero" >Guerrero</option>
+                             <option value= "CDMX">CDMX</option>
+                             <option value="Oaxaca">Oaxaca</option>
+                             <option value="Campeche">Campeche</option>
+                             <option value="Chiapas">Chiapas</option>
+                             <option value="Colima">Colima</option>
+                             <option value="Sonora">Sonora</option>
+                             <option value="Oaxaca">Oaxaca</option>
+                             <option value="Queretaro">Querétaro</option>
+                             <option value="Veracruz">Veracruz</option>
+                             <option value="Yucatan">Yucatan</option>
+                             <option value="Jalisco">Jalisco</option>
+                           </select></td> 
+                     </tr>
+             
+                     <tr>
+                        <td>Tipo de envio:</td>
+                       <td><select name="tipo_remitente">
+                            <option value= "Guerrero" >Estandar - $150 (7-10 días) </option>
+                            <option value= "CDMX">Express - $230 (3-5 días) </option>
+                            <option value="Oaxaca">Ultra express - $ 300 (1 día) </option>
+                          </select></td> 
+                    </tr>
+                     
+                     <tr>
+                         <td>Dirección:</td>
+                         <td><input type=text name="direccion_remitente"></td>  
+                     </tr>
+                     
+                     <tr>
+                         <td>Correo electronico:</td>
+                         <td><input type=email name="correo_remitente"></td>  
+                     </tr>
+             
+                     <tr>
+                         <td>Telefono:</td>
+                         <td><input type=text name="telefono_remitente"></td>  
+                     </tr>
+             
+                     <tr>
+                         <td>Comentarios:</td>
+                         <td><textarea name="Comentarios"  rows="5" cols="20"></textarea></td>  
+                     </tr>
+                  <th colspan="2"><center><button>Verificar</button></center> </th>
+                  
+                     </table></form>
+            </div>
+
+            <div class ="contenido_destinatario">
+                <table><form method="get" name="Registro_destinatario">
+                       <th colspan="2"><h2> DESTINATARIO</h2></th>
+                       
+                        <tr>
+                            <td>Nombre:</td>
+                            <td><input type=text name="nombre_destinatario"></td>  
+                        </tr>
+                        
+                        <tr>
+                            <td>Estado:</td>
+                           <td><select name="estado_destinatario">
+                                <option value= "Guerrero" >Guerrero</option>
+                                <option value= "CDMX">CDMX</option>
+                                <option value="Oaxaca">Oaxaca</option>
+                                <option value="Campeche">Campeche</option>
+                                <option value="Chiapas">Chiapas</option>
+                                <option value="Colima">Colima</option>
+                                <option value="Sonora">Sonora</option>
+                                <option value="Oaxaca">Oaxaca</option>
+                                <option value="Queretaro">Querétaro</option>
+                                <option value="Veracruz">Veracruz</option>
+                                <option value="Yucatan">Yucatan</option>
+                                <option value="Jalisco">Jalisco</option>
+                              </select></td> 
+                        </tr>
+                
+                        <tr>
+                            <td>Dirección:</td>
+                            <td><input type=text name="direccion_destinatario"></td>  
+                        </tr>
+
+                        <tr>
+                            <td>Referencias:</td>
+                            <td><textarea name="Comentarios"  rows="5" cols="20" ></textarea></td>  
+                        </tr>
+                        
+                        <tr>
+                            <td>Correo electronico:</td>
+                            <td><input type=email name="correo_destinatario"></td>  
+                        </tr>
+                
+                        <tr>
+                            <td>Telefono:</td>
+                            <td><input type=text name="telefono_destinatario"></td>  
+                        </tr>
+                
+                     <th colspan="2"><center> <button>Verificar</button></center> </th>
+                        </table></form>        
+            </div>
+
+            <div class="generar_guia">
+                <p><b>UNA VEZ HAYAS CONFIRMADO LA INFORMACIÓN, YA PUEDES GENERAR TU GUÍA DE ENVIO</b><p>
+                <p>Te enviaremos un correo electronico proporcionandote toda la información</p><br>
+                <table>
+                <th colspan="2"><center> <button><b>OBTENER GUIA</b></button></center> </th>
+            </table>
+            </div>
+
+            <div class="envio_animacion"> 
+                <img src="IMAGENES/delivery.png"> </div>
+
+        </section>
+
+    </body>
+</html>
