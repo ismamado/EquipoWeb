@@ -67,8 +67,8 @@
                                                 <th><?php  echo $row['titular']?></th>
                                                 <th><?php  echo $row['direccion']?></th>
                                                 <th><?php  echo $row['estado']?></th>    
-                                                <th><a href="actualizar.php?id=<?php echo $row['ncontrol'] ?>" class="EDITAR">Editar</a></th>
-                                                <th><a href="delete.php?id=<?php echo $row['ncontrol'] ?>" class="ELIMINAR">Eliminar</a></th>                                        
+                                                <th><a href="actualizar.php?id=<?php echo $row['idpaquete'] ?>" class="EDITAR">Editar</a></th>
+                                                <th><a href="delete.php?id=<?php echo $row['idpaquete'] ?>" class="ELIMINAR">Eliminar</a></th>                                        
                                             </tr>
                                         <?php 
                                             }
