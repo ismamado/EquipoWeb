@@ -12,7 +12,7 @@ $filas=mysqli_num_rows($resultado);
 
 if($filas){
   
-    header("location:crud/alumno.php");
+    header("location:crud/inicio.php");
 
 }else{
     ?>

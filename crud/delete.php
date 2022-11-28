@@ -11,7 +11,8 @@ $query=mysqli_query($con,$sql);
     if($query){
          echo "<script>
                 alert('Guia de paquete eliminada');
+                 window.location= 'inicio.php'
     </script>";
-        Header("Location: alumno.php");
+        
     }
 ?>
