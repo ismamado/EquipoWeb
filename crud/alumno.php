@@ -2,7 +2,7 @@
     include("conexion.php");
     $con=conectar();
 
-    $sql="SELECT *  FROM paquete";
+    $sql="SELECT * FROM softteci_paqueteria.paquete";
     $query=mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
