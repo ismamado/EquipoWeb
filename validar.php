@@ -3,7 +3,7 @@ include('db.php');
 $usuario=$_POST['usuario'];
 $password=$_POST['password'];
 
-
+$tipo='N';
 
 $consulta="SELECT id_usuario FROM usuarios where usuario='$usuario' and password='$password'";
 $resultado=mysqli_query($conexion,$consulta);
@@ -11,7 +11,8 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
-    $tipo = $row['tipo'];
+     while($row=mysqli_fetch_array($query)){
+    $tipo = $row['tipo']; }
     header("location:crud/alumno.php&A=$tipo");
 
 }else{
