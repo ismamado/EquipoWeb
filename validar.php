@@ -13,7 +13,9 @@ $filas=mysqli_num_rows($resultado);
 if($filas){
      while($row=mysqli_fetch_array($resultado)){
     $tipo = $row['tipo']; }
+
     header("location:crud/paquete.php?A=$tipo");
+
 
 }else{
     ?>
