@@ -31,14 +31,14 @@
                                     <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos">
                                     
                              <!--        <input type="submit" class="btn btn-success"> ---->
-                                    <form action="../index.html" method="post">
+                                    <form action="../login.html" method="post">
              <p></p>
              <p> 
               
             </p> 
         </form> 
          <br><br>
-            <form action="/LOGGIN/index.html" method="POST">
+            <form action="/LOGGIN/login.html" method="POST">
            <center><input class="btn btn-danger" type="submit" value="Cerrar Sesion"></center>
                                </form> 
                                 
