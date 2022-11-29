@@ -21,9 +21,9 @@ form {
 	margin-bottom: 30px
 }
 
-.boton{
+.btn btn-success{
     color: white;
-	background-color: #0000;
+	background-color: #000;
 }
 
 h1 {
@@ -135,7 +135,7 @@ header a{
 	top: -50px;
 	left: calc(50% - 50px);
 }
-/*@media only screen and (min-width:360px) and (max-width:757px){
+@media only screen and (min-width:360px) and (max-width:757px){
 	form {
 		padding: 50px 20px;
 		background-color: #381b1ba6;
@@ -231,4 +231,3 @@ header a{
 	}
 }
 
-*/
