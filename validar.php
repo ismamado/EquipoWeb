@@ -13,7 +13,7 @@ $filas=mysqli_num_rows($resultado);
 if($filas){
      while($row=mysqli_fetch_array($resultado)){
     $tipo = $row['tipo'];
-     $id = $row['id_usuario']
+     $id = $row['id_usuario'];
      }
 
     header("location:crud/paquete.php?A=$tipo&ID=$id");
