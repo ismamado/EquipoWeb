@@ -40,7 +40,7 @@
             </p> 
         </form> 
          <br><br>
-            <form action="/LOGGIN/login.html" method="POST">
+            <form action="../login.html" method="POST">
            <center><input class="btn btn-danger" type="submit" value="Cerrar Sesion"></center>
                                </form> 
                                 
