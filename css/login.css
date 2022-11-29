@@ -135,7 +135,7 @@ header a{
 	top: -50px;
 	left: calc(50% - 50px);
 }
-@media only screen and (min-width:360px) and (max-width:757px){
+/*@media only screen and (min-width:360px) and (max-width:757px){
 	form {
 		padding: 50px 20px;
 		background-color: #381b1ba6;
@@ -231,3 +231,4 @@ header a{
 	}
 }
 
+*/
