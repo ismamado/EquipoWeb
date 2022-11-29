@@ -3,8 +3,8 @@
     $con=conectar();
     $tipo = $_GET['A'];
     $id = $_GET['ID'];
-   if($tipo='U') { $sql="SELECT * FROM softteci_paqueteria.paquete where id_usuario = $id";}
- if($tipo='A') { $sql="SELECT * FROM softteci_paqueteria.paquete";}
+   if($tipo='U') { $sql="SELECT * FROM PAQUETE where id_usuario = $id";}
+ if($tipo='A') { $sql="SELECT * FROM PAQUETE";}
     $query=mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
@@ -65,10 +65,10 @@
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
                                             <tr>
-                                                <th><?php  echo $row['idpaquete']?></th>
-                                                <th><?php  echo $row['titular']?></th>
-                                                <th><?php  echo $row['direccion']?></th>
-                                                <th><?php  echo $row['estado']?></th>    
+                                                <th><?php  echo $row['ID_GUIA']?></th>
+                                                <th><?php  echo $row['destinatario']?></th>
+                                                <th><?php  echo $row['direccion_destino']?></th>
+                                                <th><?php  echo $row['estatus']?></th>    
                                                 <th><a href="actualizar.php?id=<?php echo $row['idpaquete'] ?>" class="EDITAR">Editar</a></th>
                                                 <th><a href="delete.php?id=<?php echo $row['idpaquete'] ?>" class="ELIMINAR">Eliminar</a></th>                                        
                                             </tr>
