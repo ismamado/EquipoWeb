@@ -9,6 +9,6 @@ $sql="DELETE FROM alumno  WHERE ncontrol='$cod_estudiante'";
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: paquete.php");
+        Header("Location: alumno.php");
     }
 ?>
