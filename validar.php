@@ -11,8 +11,8 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
-  
-    header("location:crud/alumno.php");
+    $tipo = $row['tipo'];
+    header("location:crud/alumno.php&A=$tipo");
 
 }else{
     ?>
