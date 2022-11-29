@@ -1,8 +1,8 @@
 <?php 
     include("conexion.php");
     $con=conectar();
-    $tipo = $_GET['A']
-        $id = $_GET['ID'];
+    $tipo = $_GET['A'];
+    $id = $_GET['ID'];
    if($tipo='U') { $sql="SELECT * FROM softteci_paqueteria.paquete where id_usuario = $id";}
  if($tipo='A') { $sql="SELECT * FROM softteci_paqueteria.paquete";}
     $query=mysqli_query($con,$sql);
