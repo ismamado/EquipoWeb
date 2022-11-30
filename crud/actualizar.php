@@ -3,7 +3,8 @@
     $con=conectar();
 
 $id=$_GET['id'];
-
+$tipo = $_GET['tipo'];
+$idu = $_GET['idu'];
 $sql="SELECT * FROM PAQUETE WHERE ID_GUIA='$id'";
 $query=mysqli_query($con,$sql);
 
@@ -27,10 +28,10 @@ $row=mysqli_fetch_array($query);
                     
                                 <input type="hidden" name="ID GUIA" value="<?php echo $row['ID_GUIA']  ?>">
                                 
-                              <!--    <input type="text" class="form-control mb-3" name="calif" placeholder="calif" value="<?php echo $row['calif']  ?>">
+                              <input type="text" class="form-control mb-3" name="calif" placeholder="calif" value="<?php echo $row['calif']  ?>">
                                 <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $row['nombres']  ?>">
                                 <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $row['apellidos']  ?>">
-                                ---->
+                                 
                                 
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                     </form>
