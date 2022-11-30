@@ -69,8 +69,8 @@
                                                 <th><?php  echo $row['destinatario']?></th>
                                                 <th><?php  echo $row['direccion_destino']?></th>
                                                 <th><?php  echo $row['estatus']?></th>    
-                                                <th><a href="actualizar.php?id=<?php echo $row['ID_GUIA'] ?>" class="EDITAR">Editar</a></th>
-                                                <th><a href="delete.php?id=<?php echo $row['ID_GUIA'] ?>" class="ELIMINAR">Eliminar</a></th>                                        
+                                                <th><a href="actualizar.php?id=<?php echo $row['ID_GUIA'] ?>&tipo=<?php echo $tipo ?>&idu=<?php echo $id ?>" class="EDITAR">Editar</a></th>
+                                                <th><a href="delete.php?id=<?php echo $row['ID_GUIA'] ?>&tipo=<?php echo $tipo ?>&idu=<?php echo $id ?>" class="ELIMINAR">Eliminar</a></th>                                        
                                             </tr>
                                         <?php 
                                             }
