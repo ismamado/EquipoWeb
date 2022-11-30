@@ -32,7 +32,7 @@
                                     <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombre/s">
                                     <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos">
                                     
-                             <!--        <input type="submit" class="btn btn-success"> ---->
+                                  <input type="submit" class="btn btn-success"> ---->
                                     <form action="../login.html" method="post">
              <p></p>
              <p> 
