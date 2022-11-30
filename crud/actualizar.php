@@ -26,10 +26,12 @@ $row=mysqli_fetch_array($query);
                 <div class="container mt-5">
                     <form action="update.php?tipo=<?php echo $tipo  ?>&idu=<?php echo $idu ?>" method="POST">
                     
-                                <input type="hidden" name="ID GUIA" value="<?php echo $row['ID_GUIA']  ?>">
-                                
-                           Calif:   <input type="text" class="form-control mb-3" name="calif" placeholder="calif" value="<?php echo $row['calif']  ?>">
+                              NO. GUIA  <input type="text" readonly name="ID GUIA" value="<?php echo $row['ID_GUIA']  ?>">
+                               <br> 
+                           Tipo de envio:  <input type="text" class="form-control mb-3" name="envio" placeholder="Tipo Envio" value="<?php echo $row['calif']  ?>">
+                               <br>
                                 <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $row['nombres']  ?>">
+                                <br>
                                 <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $row['apellidos']  ?>">
                                  
                                 
