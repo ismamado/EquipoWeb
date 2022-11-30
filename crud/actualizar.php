@@ -24,7 +24,7 @@ $row=mysqli_fetch_array($query);
     </head>
     <body>
                 <div class="container mt-5">
-                    <form action="update.php?tipo=<?php echo $tipo  ?>&idu=<?php echo $idu ?>" method="POST">
+                    <form action="update.php" method="POST">
                     
                                 <input type="hidden" name="ID GUIA" value="<?php echo $row['ID_GUIA']  ?>">
                                 
