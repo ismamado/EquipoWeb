@@ -45,12 +45,7 @@ $row=mysqli_fetch_array($query);
                      -->
                       <tr>
                             <td>Nombre:</td>
-                            <td><input type=text name="nombre_destinatario" value="
-                            <?php
-                            echo $row['destinatario']
-                            
-                            ?>
-                            "></td>  
+                            <td><input type=text class="form-control mb-3" name="nombre_destinatario" value="<?php echo $row['destinatario']?>"></td>  
                         </tr>
                      <tr>
                          <td>Estado:</td>
@@ -84,12 +79,7 @@ $row=mysqli_fetch_array($query);
                      
                      <tr>
                          <td>Correo electronico:</td>
-                         <td><input type=email name="correo_remitente" value="
-                            <?php
-                            echo $row['correo_destino']
-                            
-                            ?>
-                            "></td>  
+                         <td><input type=email name="correo_remitente" value="<?php echo $row['correo_destino']?>"></td>  
                      </tr>
              
                    
@@ -107,12 +97,8 @@ $row=mysqli_fetch_array($query);
                 
                         <tr>
                             <td>Dirección:</td>
-                            <td><input type=text name="direccion_destinatario" value="
-                            <?php
-                            echo $row['direccion_destino']
-                            
-                            ?>
-                            "></td>  
+                            <td><input type=text name="direccion_destinatario" value="<?php
+                            echo $row['direccion_destino']?>"></td>  
                         </tr>
 
                       
@@ -121,11 +107,7 @@ $row=mysqli_fetch_array($query);
                 
                         <tr>
                             <td>Telefono:</td>
-                            <td><input type=text name="telefono_destinatario" value="
-                            <?php
-                            echo $row['telefono_destino']
-                            ?>
-                            "></td>  
+                            <td><input type=text name="telefono_destinatario" value="<?php echo $row['telefono_destino']?>"></td>  
                         </tr>
                 
                      <tr>
