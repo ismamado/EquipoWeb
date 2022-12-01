@@ -49,20 +49,7 @@ $row=mysqli_fetch_array($query);
                         </tr>
                      <tr>
                          <td>Estado:</td>
-                        <td><select name="estado_remitente">
-                             <option value= "Guerrero" >Guerrero</option>
-                             <option value= "CDMX">CDMX</option>
-                             <option value="Oaxaca">Oaxaca</option>
-                             <option value="Campeche">Campeche</option>
-                             <option value="Chiapas">Chiapas</option>
-                             <option value="Colima">Colima</option>
-                             <option value="Sonora">Sonora</option>
-                             <option value="Oaxaca">Oaxaca</option>
-                             <option value="Queretaro">Querétaro</option>
-                             <option value="Veracruz">Veracruz</option>
-                             <option value="Yucatan">Yucatan</option>
-                             <option value="Jalisco">Jalisco</option>
-                           </select></td> 
+                        <td><input  type=text   class="form-control mb-3" name="estado" value="<?php echo $row['estado_destino']?>" readonly></td>  
                      </tr>
              
                      <tr>
