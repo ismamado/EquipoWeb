@@ -36,13 +36,14 @@ $row=mysqli_fetch_array($query);
                     
                     <div>
                
-                    <th colspan="2"><h2> PAQUETE </h2></th>
+                    <th colspan="4"><h2> Actualizacion del Paquete </h2></th>
                     
                  <!--    <tr>
                          <td>Nombre:</td>
                          <td><input type=text name="nombre_remitente"></td>  
                      </tr>
                      -->
+                     
                       <tr>
                             <td>Nombre:</td>
                             <td><input type=text class="form-control mb-3" name="nombre_destinatario" value="<?php echo $row['destinatario']?>"></td>  
@@ -51,15 +52,36 @@ $row=mysqli_fetch_array($query);
                          <td>Estado:</td>
                         <td><input  type=text   class="form-control mb-3" name="estado" value="<?php echo $row['estado_destino']?>" readonly></td>  
                      </tr>
+                     <tr>
+                         <td>Total:</td>
+                        <td><input  type=text   class="form-control mb-3" name="estado" value="<?php echo $row['total_envio']?>" readonly></td>  
+                     </tr>
              
                      <tr>
                         <td>Tipo de envio:</td>
                        <td><select name="tipo_remitente">
+                           <?php
+                           $tipo = $row['tipo_envio'];
+                            $descrip="";
+                          if($tipo=='Estandar'){
+                              $descrip = "Estandar - $130 (7-10 días) ";
+                          }
+                          if($tipo=='Express'){
+                              $descrip ="Express - $220 (3-5 días) ";
+                          }
+                          if($tipo=='Ultra'){
+                            $descrip = "Ultra express - $300 (1 día) ";
+                          }
+                           
+                           ?>
+                           <option value= "<?php echo $tipo?>" ><?php echo $descrip?></option>
                             <option value= "Estandar" >Estandar - $130 (7-10 días) </option>
                             <option value= "Express">Express - $220 (3-5 días) </option>
                             <option value="Ultra">Ultra express - $300 (1 día) </option>
                           </select></td> 
                     </tr>
+                    
+                     
                      
                 
                    
@@ -100,24 +122,40 @@ $row=mysqli_fetch_array($query);
                      <tr>
                          <td>Estatus:</td>
                         <td><select name="estatus">
-                             <option value= "Salio de la sucursal" >Salio de la sucursal</option>
-                             <option value= "Llego a tu paqueteria local">Llego a tu paqueteria local</option>
-                              <option value="En proceso de entrega a domicilio">En proceso de entrega a domicilio</option>
-                              
-                             
-                             <option value="En confirmación">Entregado</option>
+                            <?php
+                            $estado = $row['estatus'];
+                          $MenEst = "";
+                          $MenEst2 = "";
+                          if($estado=='En proceso') {
+                              $MenEst = "Salio de la sucursal";
+                          }
+                          if($estado=='Salio de la sucursal') {
+                              $MenEst = "En proceso de entrega a domicilio";
+                          }
+                          if($estado=='En proceso de entrega a domicilio') {
+                              $MenEst = "En confirmacion";
+                              $MenEst2 = "Entregado";
+                          }
+                            
+                            ?>
+                             <option value= "<?php echo $MenEst?>" ><?php echo $MenEst?></option>
                        
                            </select>
                      </tr>
+                     <tr>
+                         <td colspan="4">   <center> <br> <input type="submit" class="btn btn-primary btn-block" value="Actualizar"></center></td>
+                     </tr>
                      
-             
+            
                        
                        </td>
+                       
                         </tr>
+                            
                            </form>
                  </table>
                                 
-                            <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
+                       
                    
                     </div> 
                
