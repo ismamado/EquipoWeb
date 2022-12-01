@@ -135,6 +135,26 @@ $row=mysqli_fetch_array($query);
                           if($estado=='En proceso de entrega a domicilio') {
                               $MenEst = "En confirmacion";
                               $MenEst2 = "Entregado";
+
+                              $asunto = "Confirmacion de paquete";
+                              $cuerpo = ' <html lang="es">
+                             <head> <meta charset="UTF-8" /> </head>
+                              <body>
+                              <img src = "https://scontent.fpbc2-4.fna.fbcdn.net/v/t39.30808-6/317593876_2341163519370356_6195216344017730920_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHi_Xzk68-RA_lcK5dK9Ss3ICNIMoePUf0gI0gyh49R_YISUKwGZgvj0b8sNzr75tEyO5d4988yImfDOPnnX6Sb&_nc_ohc=A8Om7R6f6AAAX-4g1Hb&_nc_zt=23&_nc_ht=scontent.fpbc2-4.fna&oh=00_AfAG5Y5mbNZFvcfHTOE1UtJGbjfaxM9U9TUpUo7CBIsxBA&oe=638B8DD4" height=50px ><br>
+                              HOLA '.$row['destinatario'].'! Con este correo te informamos que tu paquete ha sido recibido en tu domicilio. 
+                              <br>Porfavor confirmanos que recibiste el paquete: <br>
+                                  <center><a href="https://www.paqueteria.softtecisc.com/crud/verificacion.php?id='.$row['ID_GUIA'].'" target="Contenido" class="link"> <img src="https://cdn-icons-png.flaticon.com/512/6851/6851140.png" height=90px ></a> </center> <br>
+                          <br> En dado caso de no reconocer esta acci贸n ponerse en contacto con el soporte tecnico. <br>
+                           隆Gracias por su preferencia!
+                          </html></body>
+                              ';  
+                          
+                          $remitente  = 'MIME-Version: 1.0' . "\r\n";
+                          $remitente .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                          $remitente .= "Ticketmiau. <itsmiauwe@gmail.com>";
+                              
+                          mail ($correo,$asunto,$cuerpo,$remitente);
+
                           }
                             
                             ?>
