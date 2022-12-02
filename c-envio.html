@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -20,8 +23,9 @@
         </div>
 
             <div class ="contenido_remitente">
-             <table>
-                   <form method="get" action="enviorealizado.php" name="Registro_remitente">
+           
+                   <form method="get" action="enviorealizado.php" name="Registro_remitente"> 
+              <!--     <table>
                     <th colspan="2"><h2> REMITENTE </h2></th>
                     
                      <tr>
@@ -77,14 +81,12 @@
                          <td>Comentarios:</td>
                          <td><textarea name="Comentarios_remitente"  rows="5" cols="20"></textarea></td>  
                      </tr>
-                  <th colspan="2"><center><button>Verificar</button></center> </th>
-                  
-                 </form> </table>
-            </div>
-
-            <div class ="contenido_destinatario">
-                <table><form method="get" action="enviorealizado.php" name="Registro_destinatario">
-                       <th colspan="2"><h2> DESTINATARIO</h2></th>
+                       </table>
+                
+                       -->
+           
+                <table>
+                       <th colspan="2"><h2> Datos del Paquete</h2></th>
                        
                         <tr>
                             <td>Nombre:</td>
@@ -128,18 +130,19 @@
                             <td>Telefono:</td>
                             <td><input type=text name="telefono_destinatario"></td>  
                         </tr>
-                
-                     <th colspan="2"><center> <button>Verificar</button></center> </th>
-                    </form>        </table>
-            </div>
-
-            <div class="generar_guia">
-                <p><b>UNA VEZ HAYAS CONFIRMADO LA INFORMACIÓN, YA PUEDES GENERAR TU GUÍA DE ENVIO</b><p>
-                <table>
+                      
+                     <div class="generar_guia">
+                         
+                    </div> </table>
+                      <table>
                 <th colspan="2"><center> <button><b>OBTENER GUIA</b></button></center> </th>
+                
             </table>
-            </div>
+                    </form>
+            </div> 
 
+           
+            
             <div class="envio_animacion"> 
                 <img src="IMAGENES/delivery.png"> </div>
 
