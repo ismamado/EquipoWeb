@@ -52,7 +52,7 @@ $fecha =  date('Y-n-d');
 if ($conexion) {
 
     $asunto = "Confirmación de compra";
-    $id = mysql_insert_id();
+    $id = mysqli_insert_id($conexion);
     $cuerpo = "  
     HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra! Su numero de Guia es: $id "  ;  
     $remitente = "FROM:". "envios@paqueteria.softtecisc.com";
@@ -78,13 +78,10 @@ mysqli_close($conexion);
 	<body> 
 <div class = "graciascompra" >		
 <h1> Gracias por preferir SENDIT para tus envios. </h1>
-<p> ¿Deseas recibir un correo donde te proporcionaremos la información de tu paquete? </p>
-<p2><b> Recuerda que igualmente accediento a la sección de 'Pedidos' puedes visualizar la información. </b><p2><br>
-
- <input type="radio" value="true" name="recibircorreo">Si 
- <input type="radio" value="false" name="recibircorreo"> No <br>
- <button>Siguiente</button>
-</class>	
+<p> Hemos enviado un correo con la información de tu paquete</p>
+<p2><b>Recuerda que puedes consultar el proceso de envio con tu numero de guía</b></p2><br>
+        </div>
+     
 </body >
 </html>
 
