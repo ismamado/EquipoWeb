@@ -51,4 +51,42 @@ function insertar($conexion){
 
 }
 
+function insertapaquete($conexion) {
+    if ($conexion) {
+echo " <script > alert ('Su compra se esta procesando...') </script>";      
+}
+else {
+    echo " <script > alert ('No hay conexion a la base') </script>";  
+    
+}
+ 
+   /* REMITENTE */
+    $nombre_remitente= $_POST["nombre_remitente"];
+    $tipo_remitente =$_POST["tipo_remitente"];
+    $correo_remitente = $_POST["correo_remitente"];
+ 
+/* DESTINATARIO */
+$nombre_destinatario= $_POST["nombre_destinatario"];
+$estado_destinatario =$_POST["estado_destinatario"];
+$direccion_destinatario =$_POST["direccion_destinatario"];
+$Comentarios_destinatario =$_POST["referencias_destinatario"];
+$correo_destinatario = $_POST["correo_destinatario"];
+$telefono_destino = $_POST["telefono_destinatario"];
+$total_envio=0;
+
+    if ($tipo_remitente == "Estandar") {
+$total_envio = 130;
+}
+else if 
+  ($tipo_remitente == "Express") {
+$total_envio = 220;
+}  
+else  {
+$total_envio = 300;
+}
+
+    $consulta =
+    
+}
+
 ?>
