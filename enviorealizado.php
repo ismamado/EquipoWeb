@@ -51,11 +51,25 @@ $fecha =  date('Y-n-d');
  
 if ($conexion) {
 
-    $asunto = "Confirmación de compra";
+   $asunto = "Confirmación - Envio de paquete";
     $id = mysqli_insert_id($conexion);
-    $cuerpo = "  
-    HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra! Su numero de Guia es: $id "  ;  
+ /* $cuerpo = "  
+    HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra! Su numero de Guia es: $id "  ;  */
     $remitente = "FROM:". "envios@paqueteria.softtecisc.com";
+    
+                              $cuerpo = ' <html lang="es">
+                             <head> <meta charset="UTF-8" /> </head>
+                              <body>
+                              HOLA '.$nombre_remitente.'! Con este correo te informamos que la solicitud para realizar tu envio ha sido aceptada. 
+					   A continuación te brindamos el ID con el cual podrás rastrearlo '.$id.'
+                              <br>Puedes consultar el estado de tu envio aquí: <br>
+                                  <center><a href="https://www.paqueteria.softtecisc.com/crud/verificacion.php?id='.$id.'" target="Contenido" class="link"> <img src="https://cdn-icons-png.flaticon.com/512/6851/6851140.png" height=90px ></a> </center> <br>
+                          <br> En dado caso de no reconocer esta acción ponerse en contacto con el soporte tecnico. <br>
+                           ¡Gracias por su preferencia!
+                          </html></body>
+                              ';
+    
+    
 mail ($correo_remitente,$asunto,$cuerpo,$remitente);   
 echo " <script > alert ('¡Compra exitosa!') </script>";      
 
