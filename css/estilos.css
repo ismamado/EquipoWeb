@@ -40,7 +40,7 @@ input[type="mail"]
     text-align: center;
     color:#000000;
 }
-.button{
+.button,input{
     border: none;
     width: 100%;
     color: white;
@@ -52,6 +52,11 @@ input[type="mail"]
 }
 .button:hover{
     background: cadetblue;
+}
+.input:hover {
+  
+    background: cadetblue;
+
 }
 p{
     text-align: center;
