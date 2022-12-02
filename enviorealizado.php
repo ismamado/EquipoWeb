@@ -55,9 +55,10 @@ if ($conexion) {
     $id = mysqli_insert_id($conexion);
  /* $cuerpo = "  
     HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra! Su numero de Guia es: $id "  ;  */
-    $remitente = "FROM:". "envios@paqueteria.softtecisc.com";
-    
-                              $cuerpo = ' <html lang="es">
+   // $remitente = "FROM:". "envios@paqueteria.softtecisc.com";
+    $remitente  = 'MIME-Version: 1.0' . "\r\n";
+                          $remitente .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+   $cuerpo = ' <html lang="es">
                              <head> <meta charset="UTF-8" /> </head>
                               <body>
                               HOLA '.$nombre_remitente.'! Con este correo te informamos que la solicitud para realizar tu envio ha sido aceptada. 
