@@ -22,7 +22,7 @@
                     <div class="row"> 
                         
                         <div class="col-md-3">
-                            <h1>Aqui otra cosa.</h1>
+                            <h1>Aqui otra cosa...</h1>
                               <!--     <form action="insertar.php" method="POST">
 
                                     <input type="text" class="form-control mb-3" name="ncontrol" placeholder="N. Control">
