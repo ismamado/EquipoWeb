@@ -18,10 +18,9 @@ function insertar($conexion){
     $Direccion =  $_POST["direccion"];  
     $Telefono =  $_POST["telefono"];
     
-    
-    $consulta = "INSERT INTO `usuarios`(`usuario`, `password`, `email`, `nombre`, `apellidopat`, `apellidomat`, `direccion`, 
-    `telefono`) VALUES 
-    ('$User','$Passw','$Email','$Nombre','$ApellidoPat','$ApellidoMat','$Direccion','$Telefono')";
+
+    $consulta = "INSERT INTO `softteci_paqueteria`.`usuarios` (`usuario`, `password`, `email`, `nombre`, `direccion`, `telefono`) VALUES ('$User', '$Passw', '$Email', '$Nombre', '$Direccion', '$Telefono')";
+        
     
     try{
     mysqli_query($conexion,$consulta);
