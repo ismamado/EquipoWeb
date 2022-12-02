@@ -55,8 +55,9 @@ if ($conexion) {
     $cuerpo = "  
     HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra!
     ";  
-    $remitente = "SENDIT. <envios@paqueteria.softtecisc.com>";
-mail ($correo_remitente,$asunto,$cuerpo,$remitente);   
+    $from = "envios@paqueteria.softtecisc.com";
+     $headers = "From:" . $from;
+mail ($correo_remitente,$asunto,$cuerpo,$headers);   
 echo " <script > alert ('¡Compra exitosa!') </script>";      
 
 } else {
@@ -78,8 +79,8 @@ mysqli_close($conexion);
 	<body> 
 <div class = "graciascompra" >		
 <h1> Gracias por preferir SENDIT para tus envios. </h1>
-<p> ¿Deseas recibir un correo donde te proporcionaremos la información de tu paquete? </p>
-<p2><b> Recuerda que igualmente accediento a la sección de 'Pedidos' puedes visualizar la información. </b><p2><br>
+<p> HEMOS ENVIADO A TU CORREO LA INFORMACION DE TU PAQUETE</p>
+<p2><b> Recuerda que en rastreo puedes consultar el proceso de tu paquete, solo necesitas tu numero de guía </b><p2><br>
 
  <input type="radio" value="true" name="recibircorreo">Si 
  <input type="radio" value="false" name="recibircorreo"> No <br>
