@@ -1,7 +1,8 @@
 <?php 
     include("conexion.php");
     $con=conectar();
-
+date_default_timezone_set('Mexico/General');
+echo date(DATE_ATOM);
 $id=$_GET['id'];
 $tipo = $_GET['tipo'];
 $idu = $_GET['idu'];
@@ -36,7 +37,7 @@ $row=mysqli_fetch_array($query);
                     
                     <div>
                
-                    <th colspan="4"><h2> Actualizacion del Paquete </h2></th>
+                    <th colspan="4"><h2> Actualizacion del Paquete</h2></th>
                     
                  <!--    <tr>
                          <td>Nombre:</td>
