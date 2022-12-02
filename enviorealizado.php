@@ -1,12 +1,9 @@
 
     <?php
 date_default_timezone_set('Mexico/General');
-$servername = "localhost";
-$username = "progra62_Karla";
-$password = "TicketMiau123";
-$dbname = "progra62_ticketMiau";
+
     
-$conexion=mysqli_connect($servername, $username, $password, $dbname);
+$conexion=mysqli_connect("localhost" , "softteci_paqueteria" ,"equipoweb1","softteci_paqueteria");
 if ($conexion) {
 echo " <script > alert ('Su compra se esta procesando...') </script>";      
 }
@@ -41,7 +38,7 @@ $total_envio = 220;
 else  {
 $total_envio = 300;
 }
-$fecha = echo date('Y-n-d');
+$fecha =  date('Y-n-d');
     $consulta = "INSERT INTO `softteci_paqueteria`.`PAQUETE` (`id_usuario`, `fecha_salida`, `tipo_envio`, `total_envio`, `destinatario`, `correo_destino`, `direccion_destino`, `estado_destino`,  `telefono_destino`, `correo_remitente`, `nombre_remitente`, `referencias`) 
     VALUES ('1', '$fecha', '$tipo_remitente', '$total_envio', '$nombre_destinatario', '$correo_destinatario', '$direccion_destinatario', '$estado_destinatario',  '$telefono_destino', '$correo_remitente', '$nombre_remitente', '$referencias_destinatario')";
 
@@ -68,7 +65,7 @@ echo " <script > alert ('¡Compra exitosa!') </script>";
 
 mysqli_close($conexion);
 
-echo ?>
+ ?>
     
 <!DOCTYPE html>
 <html lang="es"> 
