@@ -25,65 +25,9 @@
             <div class ="contenido_remitente">
            
                    <form method="get" action="enviorealizado.php" name="Registro_remitente"> 
-              <!--     <table>
-                    <th colspan="2"><h2> REMITENTE </h2></th>
-                    
-                     <tr>
-                         <td>Nombre:</td>
-                         <td><input type=text name="nombre_remitente"></td>  
-                     </tr>
-                     
-                     <tr>
-                         <td>Estado:</td>
-                        <td><select name="estado_remitente">
-                             <option value= "Guerrero" >Guerrero</option>
-                             <option value= "CDMX">CDMX</option>
-                             <option value="Oaxaca">Oaxaca</option>
-                             <option value="Campeche">Campeche</option>
-                             <option value="Chiapas">Chiapas</option>
-                             <option value="Colima">Colima</option>
-                             <option value="Sonora">Sonora</option>
-                             <option value="Oaxaca">Oaxaca</option>
-                             <option value="Queretaro">Querétaro</option>
-                             <option value="Veracruz">Veracruz</option>
-                             <option value="Yucatan">Yucatan</option>
-                             <option value="Jalisco">Jalisco</option>
-                           </select></td> 
-                     </tr>
-             
-                     <tr>
-                        <td>Tipo de envio:</td>
-                       <td><select name="tipo_remitente">
-                            <option value= "Estandar" >Estandar - $130 (7-10 días) </option>
-                            <option value= "Express">Express - $220 (3-5 días) </option>
-                            <option value="Ultra">Ultra express - $300 (1 día) </option>
-                          </select></td> 
-                    </tr>
-                     
-                    
+           
                 
-                     <tr>
-                         <td>Dirección:</td>
-                         <td><input type=text name="direccion_remitente"></td>  
-                     </tr>
-                     
-                     <tr>
-                         <td>Correo electronico:</td>
-                         <td><input type=email name="correo_remitente"></td>  
-                     </tr>
-             
-                     <tr>
-                         <td>Telefono:</td>
-                         <td><input type=text name="telefono_remitente"></td>  
-                     </tr>
-             
-                     <tr>
-                         <td>Comentarios:</td>
-                         <td><textarea name="Comentarios_remitente"  rows="5" cols="20"></textarea></td>  
-                     </tr>
-                       </table>
-                
-                       -->
+                    
            
                 <table>
                        <th colspan="2"><h2> Datos del Paquete</h2></th>
@@ -110,7 +54,15 @@
                                 <option value="Jalisco">Jalisco</option>
                               </select></td> 
                         </tr>
-                
+                 <tr>
+                        <td>Tipo de envio:</td>
+                       <td><select name="tipo_remitente">
+                            <option value= "Estandar" >Estandar - $130 (7-10 días) </option>
+                            <option value= "Express">Express - $220 (3-5 días) </option>
+                            <option value="Ultra">Ultra express - $300 (1 día) </option>
+                          </select></td> 
+                    </tr>
+                     
                         <tr>
                             <td>Dirección:</td>
                             <td><input type=text name="direccion_destinatario"></td>  
@@ -134,10 +86,32 @@
                      <div class="generar_guia">
                          
                     </div> </table>
+                         <table>
+                    <th colspan="2"><h2>Contacto</h2></th>
+                    
+                     <tr>
+                         <td>Nombre:</td>
+                         <td><input type=text name="nombre_remitente"></td>  
+                     </tr>
+                     
+                   
+             
+                    
+                    
+                
+                     
+                     <tr>
+                         <td>Correo electronico:</td>
+                         <td><input type=email name="correo_remitente"></td>  
+                     </tr>
+             
+                  
+                       </table>
                       <table>
                 <th colspan="2"><center> <button><b>OBTENER GUIA</b></button></center> </th>
                 
             </table>
+                   
                     </form>
             </div> 
 
