@@ -2,16 +2,20 @@
     <?php
 
 $servername = "localhost";
-$username = "progra62_Karla";
-$password = "TicketMiau123";
-$dbname = "progra62_ticketMiau";
+$username = "softteci_paqueteria";
+$password = "equipoweb1";
+$dbname = "softteci_paqueteria";
+
+
     
+
+
+
 $conexion=mysqli_connect($servername, $username, $password, $dbname);
     
 $ID_GUIA= $_GET["id"];    
 $Validacion = "Validado";
-
-$query = "UPDATE compra SET Validacion = '$Validacion' WHERE RFC='$rfc'";
+$query = "UPDATE `softteci_paqueteria`.`PAQUETE` SET validacion = '$Validacion' WHERE ID_GUIA='$rfc'";
 $Resultado= mysqli_query($conexion,$query);
 
 if($Resultado)
@@ -19,7 +23,7 @@ if($Resultado)
    echo '<html lang="es">
     <head>
         <meta charset="UTF-8">
-	<title> TICKETMIAU </title>
+	<title> SENDIT </title>
 	</head>
 	<body bgcolor= black > 
 			
@@ -28,8 +32,7 @@ if($Resultado)
        <center> <img src= https://i.pinimg.com/originals/d0/c8/7b/d0c87bc251511923ddebdf5f11df2a85.gif > </center>
        </br></br>
        
-<center><b><font color=gray face=arial> Alumna: Gallardo Santos Karla Edith</font></b><br>
-<font color=gray face=arial>No.Control: 19320953</font> <br>
+
 
 </body >
 </html>';
