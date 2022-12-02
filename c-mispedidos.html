@@ -31,7 +31,7 @@
 $conexion=mysqli_connect("162.241.62.45", "softteci_ismael", "ismamado123", "softteci_paqueteria") 
 or die("Problemas con la conexión");
 
-$consulta="select * from envios";
+$consulta="select * from PAQUETE";
 
 $registros=mysqli_query($conexion,$consulta);
 while ($reg=mysqli_fetch_array($registros)){
