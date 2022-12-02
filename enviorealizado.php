@@ -52,9 +52,9 @@ $fecha =  date('Y-n-d');
 if ($conexion) {
 
     $asunto = "Confirmación de compra";
+    $id = mysql_insert_id();
     $cuerpo = "  
-    HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra!
-    ";  
+    HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra! Su numero de Guia es: $id "  ;  
     $remitente = "FROM:". "envios@paqueteria.softtecisc.com";
 mail ($correo_remitente,$asunto,$cuerpo,$remitente);   
 echo " <script > alert ('¡Compra exitosa!') </script>";      

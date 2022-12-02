@@ -6,6 +6,7 @@
    if($tipo=='U') { $sql="SELECT * FROM PAQUETE where id_usuario = $id";}
  if($tipo=='A') { $sql="SELECT * FROM PAQUETE";}
     $query=mysqli_query($con,$sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
