@@ -80,12 +80,9 @@ mysqli_close($conexion);
 <div class = "graciascompra" >		
 <h1> Gracias por preferir SENDIT para tus envios. </h1>
 <p> HEMOS ENVIADO A TU CORREO LA INFORMACION DE TU PAQUETE</p>
-<p2><b> Recuerda que en rastreo puedes consultar el proceso de tu paquete, solo necesitas tu numero de guía </b><p2><br>
+<p2><b> Recuerda que en rastreo puedes consultar el proceso de tu paquete, solo necesitas tu numero de guía </b></p2><br>
 
- <input type="radio" value="true" name="recibircorreo">Si 
- <input type="radio" value="false" name="recibircorreo"> No <br>
- <button>Siguiente</button>
-</class>	
+        </div>	
 </body >
 </html>
 
