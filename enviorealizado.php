@@ -1,6 +1,6 @@
-<!-- 
-    <?php
 
+    <?php
+date_default_timezone_set('Mexico/General');
 $servername = "localhost";
 $username = "progra62_Karla";
 $password = "TicketMiau123";
@@ -14,48 +14,52 @@ else {
     echo " <script > alert ('No hay conexion a la base') </script>";  
     
 }
-/* REMITENTE */
-    $nombre_remitente= $_GET["nombre_remitente"];
-    $estado_remitente =$_GET["tipo_remitente"];
-    $cantidad_remitente =$_GET["cantidad_remitente"];
-    $direccion_remitente =$_GET["direccion_remitente"];
-    $correo_remitente = $_GET["correo_remitente"];
-    $telefono_remitente = $_GET["telefono_remitente"];
-    $Comentarios_remitente = $_GET["Comentarios_remitente"];
+
+
+
+   /* REMITENTE */
+    $nombre_remitente= $_POST["nombre_remitente"];
+    $tipo_remitente =$_POST["tipo_remitente"];
+    $correo_remitente = $_POST["correo_remitente"];
+ 
 /* DESTINATARIO */
-$nombre_destinatario= $_GET["nombre_destinatario"];
-$estado_destinatario =$_GET["estado_destinatario"];
-$direccion_destinatario =$_GET["direccion_destinatario"];
-$Comentarios_destinatario =$_GET["Comentarios_destinatario"];
-$correo_destinatario = $_GET["correo_destinatario"];
-$telefono_destinatario = $_GET["telefono_destinatario"];
+$nombre_destinatario= $_POST["nombre_destinatario"];
+$estado_destinatario =$_POST["estado_destinatario"];
+$direccion_destinatario =$_POST["direccion_destinatario"];
+$referencias_destinatario =$_POST["referencias_destinatario"];
+$correo_destinatario = $_POST["correo_destinatario"];
+$telefono_destino = $_POST["telefono_destinatario"];
+$total_envio=0;
 
     if ($tipo_remitente == "Estandar") {
-$tipo = 130;
+$total_envio = 130;
 }
 else if 
   ($tipo_remitente == "Express") {
-$tipo = 220;
+$total_envio = 220;
 }  
 else  {
-$tipo = 300;
+$total_envio = 300;
 }
+$fecha = echo date('Y-n-d');
+    $consulta = "INSERT INTO `softteci_paqueteria`.`PAQUETE` (`id_usuario`, `fecha_salida`, `tipo_envio`, `total_envio`, `destinatario`, `correo_destino`, `direccion_destino`, `estado_destino`,  `telefono_destino`, `correo_remitente`, `nombre_remitente`, `referencias`) 
+    VALUES ('1', '$fecha', '$tipo_remitente', '$total_envio', '$nombre_destinatario', '$correo_destinatario', '$direccion_destinatario', '$estado_destinatario',  '$telefono_destino', '$correo_remitente', '$nombre_remitente', '$referencias_destinatario')";
 
- $totalcompra = $tipo * $cantidad_remitente;
- 
- mysqli_query($conexion,"
-	INSERT INTO compra(RFC, Nombre, Correo, Seccion, Cantidad, TotalCompra) 
-	VALUES ('$rfc','$nombre','$correo','$seccion','$cantidad','$totalcompra')") 
+
+
+ mysqli_query($conexion,$consulta) 
 	or  die("Problemas en el select".mysqli_error($conexion));
+
+
  
-if ($recibircorreo = 'true') {
+if ($conexion) {
 
     $asunto = "Confirmación de compra";
     $cuerpo = "  
-    HOLA $nombre! Con este correo confirmamos que realizaste una compra boletos, una cantidad de $cantidad en $seccion ,obteniendo un total de compra de $totalcompra. ¡Gracias por su compra!
+    HOLA $nombre_remitente! Con este correo confirmamos que realizaste un envio de paqueteria,  ¡Gracias por su compra!
     ";  
-    $remitente = "Ticketmiau. <itsmiauwe@gmail.com>";
-mail ($correo,$asunto,$cuerpo,$remitente);   
+    $remitente = "SENDIT. <envios@paqueteria.softtecisc.com>";
+mail ($correo_remitente,$asunto,$cuerpo,$remitente);   
 echo " <script > alert ('¡Compra exitosa!') </script>";      
 
 } else {
@@ -64,7 +68,9 @@ echo " <script > alert ('¡Compra exitosa!') </script>";
 
 mysqli_close($conexion);
 
-echo " --><!DOCTYPE html>
+echo ?>
+    
+<!DOCTYPE html>
 <html lang="es"> 
 <head>
 <link rel = "stylesheet" type="text/css" href="estilos.css"/>
@@ -84,7 +90,4 @@ echo " --><!DOCTYPE html>
 </class>	
 </body >
 </html>
-       
-<!--        ";
 
-?> -->
